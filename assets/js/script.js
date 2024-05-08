@@ -77,13 +77,18 @@ function displayFiveDayCards(forecastData) {
     });
 }
 
-//Use this to create a location card on the left hand side
+//Use this to create a location card on the right hand side
 function createLocationCard(cityName, temperature, windSpeed, humidity) {
     let existingCard = document.getElementById('location-card');
+    let date = new Date()
+    let month = date.getMonth() +1;
+    let day = date.getDate();
+    let year = date.getFullYear();
+    let currentDate = `${month}/${day}/${year}`;
 
     if (existingCard) {
         existingCard.innerHTML = `
-            <h3>${cityName}</h3>
+            <h3>${cityName} (${currentDate})</h3>
             <p>Temperature: ${temperature}°C</p>
             <p>Wind Speed: ${windSpeed} m/s</p>
             <p>Humidity: ${humidity}%</p>
@@ -93,7 +98,7 @@ function createLocationCard(cityName, temperature, windSpeed, humidity) {
         locationCard.id = 'location-card';
         locationCard.classList.add('location-card');
         locationCard.innerHTML = `
-        <h3>${cityName}</h3>
+        <h3>${cityName} (${currentDate})</h3>
         <p>Temperature: ${temperature}°C</p>
         <p>Wind Speed: ${windSpeed} m/s</p>
         <p>Humidity: ${humidity}%</p>
@@ -104,6 +109,9 @@ function createLocationCard(cityName, temperature, windSpeed, humidity) {
 }
 
 function createForecastCard(date, temperature, windSpeed, humidity) {
+    let gapContainer = document.createElement('div');
+    gapContainer.classList.add('gap-container');
+
     let forecastCard = document.createElement('div');
     forecastCard.classList.add('forecast-card');
     forecastCard.innerHTML = `
@@ -112,16 +120,18 @@ function createForecastCard(date, temperature, windSpeed, humidity) {
         <p>Wind Speed: ${windSpeed} m/s</p>
         <p>Humidity: ${humidity}%</p>
     `;
-    fiveDayForecastContainer.appendChild(forecastCard);
+    gapContainer.appendChild(forecastCard);
+    fiveDayForecastContainer.appendChild(gapContainer);
 }
 
 // Create Search History Cards
 function createSearchHistoryCard(cityName) {
-    let searchHistoryCard = document.createElement('div');
-    searchHistoryCard.classList.add('search-history');
-    searchHistoryCard.innerHTML = `
-        <h3>${cityName}</h3>
-    `;
-    document.getElementById('search-history').appendChild(searchHistoryCard);
-}
+    let searchCard = document.createElement('div')
+    searchCard.classList.add('search-card');
 
+    let searchHistoryContent = document.createElement('h3');
+    searchHistoryContent.textContent = cityName;
+
+    searchCard.appendChild(searchHistoryContent);
+    document.getElementById('search-history').appendChild(searchCard);
+}

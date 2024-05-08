@@ -1,3 +1,5 @@
+/* Header Section */
+
 header {
     width: 100%;
     height: 70px;
@@ -10,6 +12,8 @@ h1 {
     justify-content: center;
 }
 
+/* Left Search City Section */
+
 .data-section {
     display: flex;
     flex-direction: row;
@@ -20,7 +24,7 @@ h1 {
 #search-for-city {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align items to the start (left) */
+    align-items: flex-start;
 }
 
 #search-input {
@@ -39,24 +43,80 @@ h1 {
     background-color: #00ccff;
 }
 
+/* Search History Boxoes */
+
 #search-history {
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
+
+.search-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.search-card {
+    background-color: #cccccc;
+    text-align: center;
+    padding-top: 8px;
+}
+
+.gap-search-card {
+    background-color: #ffffff;
+    flex-grow: 1;
+}
+
+/* Right-Hand Results Section */
 
 .results-section {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+/* Location Card Section */
+
 #location-container {
-    width: 100%; /* Adjust as needed */
+    flex: 1;
+    width: 100%;
     height: 20px;
     text-align: left;
-    margin: 0px 20px 0px 30px; /* Space between search and location */
+    margin: 0px 30px 0px 30px;
+    border: #000000;
+}
+
+h3 {
+    font-size: 50px;
+}
+
+/* Five Day Forecast Section */
+
+#five-day-forecast {
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    color: white;
+}
+
+.forecast-section {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.forecast-card {
+    background-color: #1f3d7a;
+    padding: 10px;
+}
+
+.gap-container {
+    background-color: #ffffff;
+    flex-grow: 1;
 }
 
 .location-card {
     margin-bottom: 20px;
+    border: 2px solid;
+    padding: 10px;
 }
