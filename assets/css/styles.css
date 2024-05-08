@@ -1,0 +1,62 @@
+header {
+    width: 100%;
+    height: 70px;
+    background-color: #3333ff;
+}
+
+h1 {
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.data-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+#search-for-city {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start (left) */
+}
+
+#search-input {
+    width: 350px;
+    margin-top: 15px;
+}
+
+#search-btn {
+    width: 350px;
+    margin-top: 15px;
+    background-color: #3399ff;
+    color: #ffffff;
+}
+
+#search-btn:hover {
+    background-color: #00ccff;
+}
+
+#search-history {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.results-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#location-container {
+    width: 100%; /* Adjust as needed */
+    height: 20px;
+    text-align: left;
+    margin: 0px 20px 0px 30px; /* Space between search and location */
+}
+
+.location-card {
+    margin-bottom: 20px;
+}
