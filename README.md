@@ -23,7 +23,7 @@ To install, please clone this repository to your computer using the following st
 
 ## Usage
 
-To view this site, either visit the link <https://jacobmca.github.io/Task-Board-Challenge/> or open the Weather-Dashboard-Project/index.html file on any major browser from your computer.
+To view this site, either visit the link <https://jacobmca.github.io/Weather-Dashboard-Project/> or open the Weather-Dashboard-Project/index.html file on any major browser from your computer.
 
 ## Screenshots
 

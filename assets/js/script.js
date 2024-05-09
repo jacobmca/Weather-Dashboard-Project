@@ -95,13 +95,11 @@ function displayWeatherData(weatherData) {
 }
 
 // Retrieve Five Day Forecast Card Data
-function displayFiveDayCards(forecastData) {
+function displayFiveDayCards(forecastData, cityName) {
     const forecasts = forecastData.list.filter(forecast => forecast.dt_txt.includes('12:00:00'));
     const weatherIconCode = forecasts[0].weather[0].icon;
     console.log(forecastData);
     const weatherIconUrl = `https://openweathermap.org/img/w/${weatherIconCode}.png`
-
-    //New Data
 
     let storedFiveDayData = {
         forecasts: forecasts,
@@ -110,9 +108,7 @@ function displayFiveDayCards(forecastData) {
 
     const weatherFiveDayDataJSON = JSON.stringify(storedFiveDayData);
 
-    localStorage.setItem(forecasts, weatherFiveDayDataJSON)
-
-    //New Data
+    localStorage.setItem(cityName, weatherFiveDayDataJSON)
 
     fiveDayForecastContainer.innerHTML = '';
 
